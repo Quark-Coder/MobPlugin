@@ -1,0 +1,21 @@
+name: QuarkTestPlugin
+version: '1.0'
+main: com.plugin.QuarkTestPlugin
+api-version: 1.16
+prefix: QuarkPlugin
+authors: [ Quark ]
+description: Test plugin
+commands:
+  fly:
+    description: Toggles flying for the player.
+    usage: /fly
+    aliases: f
+    permission: fly
+    permission-message: You don`t have a permission.
+
+  creeper:
+    description: Toggles creeper ability.
+    usage: /creeper
+    permission: creeper
+    permission-message: You don`t have a permission.
+
