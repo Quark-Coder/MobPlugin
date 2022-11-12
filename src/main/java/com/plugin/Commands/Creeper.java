@@ -11,6 +11,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 
 public class Creeper implements CommandExecutor {
+
+    public int ammount = 1;
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)){
             sender.sendMessage("Only players can run this command.");
@@ -18,8 +20,9 @@ public class Creeper implements CommandExecutor {
         }
 
         Player player = (Player) sender;
+        player.setLevel(3);
 
-        ItemStack creeperEgg = new ItemStack(Material.CREEPER_SPAWN_EGG, 1);
+        ItemStack creeperEgg = new ItemStack(Material.CREEPER_SPAWN_EGG, ammount);
         ItemMeta creeperEggMeta = creeperEgg.getItemMeta();
         creeperEggMeta.setDisplayName("Creeper");
         ArrayList<String> lore = new ArrayList<String>();
